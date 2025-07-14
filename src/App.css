@@ -1,0 +1,11 @@
+/* Header */
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+
+}
+
+.logo {
+    width: 70px;
+}
