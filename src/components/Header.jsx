@@ -2,8 +2,8 @@ export default function Header() {
     return (
         <header>
             <div className="container d-flex justify-content-between align-items-center py-4">
-                <img src="/dc-logo.png" alt="DC" className="logo" />
-                <nav className="nav d-flex gap-2">
+                <img src="./dc-logo.png" alt="DC" className="logo" />
+                <nav className="nav d-flex gap-3">
                     <a href="#">Characters</a>
                     <a href="#">Comics</a>
                     <a href="#">Movies</a>
