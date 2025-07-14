@@ -10,7 +10,7 @@ export default function Main() {
 
             {/* Sezione 2 */}
             <section className="icons-section bg-primary py-5 text-white">
-                <div className="container d-flex justify-content-between align-items-center text-white g-2">
+                <div className="container d-flex justify-content-between align-items-center text-white g-1">
                     <img src="/buy-comics-digital-comics.png" alt="Digital" className="icon-img" />
                     <span>DIGITAL COMICS</span>
                     <img src="/buy-comics-merchandise.png" alt="Merchandise" className="icon-img" />
