@@ -1,12 +1,31 @@
+import comics from "../db/comics";
+
 export default function Main() {
     return (
         <main>
+            {/* Jumbotron */}
+            <div className="jumbo">
+
+            </div>
             {/* Sezione 1 */}
-            <section className="hero-section bg-dark text-white py-4">
+            <div className="hero-section bg-dark text-white py-5">
+                <a href="#" className="btn btn-primary rounded-0">Current Series</a>
                 <div className="container">
-                    <h1>Content goes here</h1>
+                    <div className="row mt-1">
+                        {comics.map(({ id, series, thumb }) => (
+                            <div className="col-6 col-md-4 col-lg-2 mb-4" key={id}>
+                                <div className="card h-100 rounded-0 border-0">
+                                    <img src={thumb} className="card-img-top h-60" alt={series} />
+                                    <div className="card-body bg-dark text-white text-center">
+                                        <h6>{series}</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <button className="btn btn-primary d-block mx-auto mt-1 rounded-0">Load More</button>
                 </div>
-            </section>
+            </div>
 
             {/* Sezione 2 */}
             <section className="icons-section bg-primary py-5 text-white">
@@ -23,6 +42,6 @@ export default function Main() {
                     <span>DC POWER VISA</span>
                 </div>
             </section>
-        </main>
+        </main >
     );
 }
