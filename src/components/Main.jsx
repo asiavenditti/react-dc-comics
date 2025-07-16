@@ -1,4 +1,5 @@
 import comics from "../db/comics";
+import Card from "./Card";
 
 export default function Main() {
     return (
@@ -12,16 +13,12 @@ export default function Main() {
                 <a href="#" className="btn btn-primary rounded-0">Current Series</a>
                 <div className="container">
                     <div className="row mt-1">
-                        {comics.map(({ id, series, thumb }) => (
+                        {comics.map(({ id, title, thumb }) => (
                             <div className="col-6 col-md-4 col-lg-2 mb-4" key={id}>
-                                <div className="card h-100 rounded-0 border-0">
-                                    <img src={thumb} className="card-img-top h-60" alt={series} />
-                                    <div className="card-body bg-dark text-white text-center">
-                                        <h6>{series}</h6>
-                                    </div>
-                                </div>
+                                <Card title={title} thumb={thumb} />
                             </div>
                         ))}
+
                     </div>
                     <button className="btn btn-primary d-block mx-auto mt-1 rounded-0">Load More</button>
                 </div>
