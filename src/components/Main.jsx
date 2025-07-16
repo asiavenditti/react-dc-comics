@@ -1,7 +1,7 @@
-import comics from "../db/comics";
+// import comics from "../db/comics";
 import Card from "./Card";
 
-export default function Main() {
+export default function Main({ comics }) {
     return (
         <main>
             {/* Jumbotron */}
@@ -13,9 +13,9 @@ export default function Main() {
                 <a href="#" className="btn btn-primary rounded-0">Current Series</a>
                 <div className="container">
                     <div className="row mt-1">
-                        {comics.map(({ id, title, thumb }) => (
+                        {comics.map(({ id, thumb, series }) => (
                             <div className="col-6 col-md-4 col-lg-2 mb-4" key={id}>
-                                <Card title={title} thumb={thumb} />
+                                <Card title={series} thumb={thumb} />
                             </div>
                         ))}
 

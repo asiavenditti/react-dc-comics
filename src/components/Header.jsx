@@ -1,6 +1,6 @@
-import navItems from "../db/nav";
+// import navItems from "../db/nav";
 
-export default function Header() {
+export default function Header({ navItems }) {
     return (
         <header>
             <div className="container d-flex justify-content-between align-items-center py-4">
